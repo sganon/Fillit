@@ -6,7 +6,7 @@
 #    By: sganon <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 20:27:43 by sganon            #+#    #+#              #
-#    Updated: 2015/12/03 20:56:31 by sganon           ###   ########.fr        #
+#    Updated: 2015/12/04 13:51:33 by sganon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,11 +24,11 @@ LDLIBS=-lft
 
 HDDIRS=-I./inc
 
-SRC=main.c
+SRC=main.c read.c
 
 SRCDIR=src/
 
-OBJ=main.o
+OBJ=main.o read.o
 
 OBJDIR=obj/
 
