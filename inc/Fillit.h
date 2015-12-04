@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:30:41 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/04 15:19:58 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/04 19:42:34 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@
 # include <unistd.h>
 # include <fcntl.h>
 
+int		check_init(char *str);
+int		check_for_size(char **tab);
+void	ft_putnbr(int n);
+int		check_for_char(char **tab);
+char	**convert_to_letter(char **tab);
 void	ft_putstr(char const *s);
 char	**put_in_tab(char *str);
 char	**ft_strsplit(char const *s, char c);

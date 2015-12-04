@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:56:53 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/04 15:26:50 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/04 19:12:10 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,31 @@ char	*read_that_file(char *filename)
 char	**put_in_tab(char *str)
 {
 	char	**tab;
+	int		i;
 
+	i = 0;
 	tab = ft_strsplit(str, '\n');
+	return (tab);
+}
+
+char	**convert_to_letter(char **tab)
+{
+	int	i;
+	int	j;
+	int k;
+
+	i = 0;
 	while (tab[i])
 	{
-
+		j = 0;
+		k = i / 4;
+		while (tab[i][j])
+		{
+			if (tab[i][j] == '#')
+				tab[i][j] = tab[i][j] + 30 + k;
+			j++;
+		}
+		i++;
 	}
 	return (tab);
 }

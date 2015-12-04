@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:45:55 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/04 15:21:05 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/04 19:52:18 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,22 @@ int		main(int argc, char **argv)
 	i = 0;
 	(void)argc;
 	str = read_that_file(argv[1]);
-	tab = put_in_tab(str);
-	//ft_putendl(str);
-	while (tab[i])
+	if (check_init(str))
 	{
-		ft_putendl(tab[i]);
-		i++;
+		tab = put_in_tab(str);
+		if (check_for_char(tab) && check_for_size(tab))
+		{
+			tab = convert_to_letter(tab);
+			while (tab[i])
+			{
+				if (!(i % 4))
+					ft_putstr("\n");
+				ft_putendl(tab[i]);
+				i++;
+			}
+		}
 	}
+	else
+		ft_putstr("error");
 	return (0);
 }
