@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 18:28:21 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/04 19:50:46 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/05 16:03:47 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,33 @@ int		check_for_size(char **tab)
 	}
 	if (i % 4)
 		return (0);
+	return (1);
+}
+
+int		check_for_nbpiece(char **tab)
+{
+	int i;
+	int j;
+	int counter;
+
+	counter = 0;
+	i = 0;
+	while (tab[i])
+	{
+		j = 0;
+		while (j <= ft_strlen(tab[i]))
+		{
+			if (tab[i][j] == '#')
+				counter++;
+			j++;
+		}
+		if (i != 0 && !(i% 4))
+		{
+			if (counter > 4)
+				return (0);
+			counter = 0;
+		}
+		i++;
+	}
 	return (1);
 }
