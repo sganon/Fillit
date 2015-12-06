@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:45:55 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/05 16:03:49 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/06 18:25:13 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int		main(int argc, char **argv)
 	if (check_init(str))
 	{
 		tab = put_in_tab(str);
+		ft_putnbr(check_for_nbpiece(tab));
+		ft_putstr("\n");
 		if (check_for_char(tab) && check_for_size(tab) && check_for_nbpiece(tab))
 		{
 			tab = convert_to_letter(tab);
