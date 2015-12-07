@@ -6,7 +6,7 @@
 #    By: sganon <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 20:27:43 by sganon            #+#    #+#              #
-#    Updated: 2015/12/05 16:04:45 by sganon           ###   ########.fr        #
+#    Updated: 2015/12/07 14:58:54 by sganon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ SRC_LIST=$(addprefix $(SRCDIR), $(SRC))
 
 OBJ_LIST=$(addprefix $(OBJDIR), $(OBJ))
 
-$(NAME): 
+$(NAME):
 		@echo "Compiling sources.."
 		@$(CC) $(CFLAGS) -c $(SRC_LIST) $(HDDIRS)
 		@echo "Moving objects..."

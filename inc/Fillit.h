@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:30:41 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/05 13:50:23 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/07 14:56:12 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 # include <unistd.h>
 # include <fcntl.h>
 
+char	*ft_itoa(int n);
+int		check_for_contact(char **tab);
 int		check_for_nbpiece(char **tab);
 int		check_init(char *str);
 int		check_for_size(char **tab);
