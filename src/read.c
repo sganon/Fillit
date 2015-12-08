@@ -6,11 +6,11 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:56:53 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/05 14:59:04 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/08 18:46:16 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fillit.h"
+#include "fillit.h"
 
 char	*read_that_file(char *filename)
 {
@@ -31,16 +31,6 @@ char	*read_that_file(char *filename)
 		dest = ft_strjoin(dest, tmp);
 	}
 	return (dest);
-}
-
-char	**put_in_tab(char *str)
-{
-	char	**tab;
-	int		i;
-
-	i = 0;
-	tab = ft_strsplit(str, '\n');
-	return (tab);
 }
 
 char	**convert_to_letter(char **tab)

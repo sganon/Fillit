@@ -6,11 +6,11 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 18:28:21 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/07 15:25:22 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/08 18:50:08 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fillit.h"
+#include "fillit.h"
 
 int		check_init(char *str)
 {
@@ -21,26 +21,20 @@ int		check_init(char *str)
 	{
 		if (str[i] != '\n')
 			return (0);
-		i = i + i + 1;
+		i = i + 21;
 	}
 	return (1);
 }
 
-int		check_for_char(char **tab)
+int		check_for_char(char *str)
 {
 	int i;
-	int j;
 
 	i = 0;
-	while(tab[i])
+	while(str[i])
 	{
-		j = 0;
-		while (tab[i][j])
-		{
-			if (tab[i][j] != '.' && tab[i][j] != '#')
-				return (0);
-			j++;
-		}
+		if (str[i] != '.' && str[i] != '#' && str[i] != '\n')
+			return (0);
 		i++;
 	}
 	return (1);
@@ -59,58 +53,6 @@ int		check_for_size(char **tab)
 	}
 	if (i % 4)
 		return (0);
-	return (1);
-}
-
-int		check_for_nbpiece(char **tab)
-{
-	int				i;
-	unsigned int	j;
-	int				counter;
-
-	counter = 0;
-	i = 0;
-	while (tab[i])
-	{
-		j = 0;
-		while (j <= ft_strlen(tab[i]))
-		{
-			if ((i % 4) == 0 && i > 1 && j == 0)
-			{
-				if (counter != 4)
-					return (0);
-				counter = 0;
-			}
-			if (tab[i][j] == '#')
-				counter++;
-			j++;
-		}
-		i++;
-	}
-	return (1);
-}
-
-int		check_for_contact(char **tab)
-{
-	int				i;
-	unsigned int	j;
-
-	i = 0;
-	while (tab[i])
-	{
-		j = 0;
-		while (j <= ft_strlen(tab[i]))
-		{
-			if (tab[i][j] == '#')
-			{
-				if ((tab[i + 1][j] && tab[i + 1][j] != '#') && (tab[i - 1][j] && tab[i - 1][j] != '#') && 
-						(tab[i][j + 1] && tab[i][j + 1] != '#') && (tab[i][j - 1] && tab[i][j - 1] != '#'))
-					return (0);
-
-			}
-			j++;
-		}
-		i++;
-	}
-	return (1);
+	else
+		return (1);
 }
