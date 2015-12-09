@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:45:55 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/09 17:09:45 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/09 18:39:15 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int		main(int argc, char **argv)
 			tab_to_lst(tab, ptr);
 			while (ptr->next != NULL)
 			{
+				ft_putnbr(ptr->id);
+				ft_putstr("\n");
 				while (j < 4)
 				{
 					ft_putendl(ptr->tab[j]);

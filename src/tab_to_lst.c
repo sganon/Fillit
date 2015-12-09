@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 18:50:32 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/09 17:09:15 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/09 18:38:23 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,17 @@ char	**cut_tetri(char **tab, int i)
 void	tab_to_lst(char **tab, t_tetri *ptr)
 {
 	int i;
+	int	id;
 
+	id = 0;
 	i = 0;
 	if (ptr == NULL)
 		ptr = (t_tetri *)malloc(sizeof(t_tetri));
 	while (ptr && tab[i])
 	{
 		ptr->tab = cut_tetri(tab, i);
+		ptr->id = id;
+		id++;
 		i = i + 4;
 		ptr->next = (t_tetri *)malloc(sizeof(t_tetri));
 		ptr = ptr->next;

@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:30:41 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/09 14:02:10 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/09 18:37:30 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ typedef struct		s_pattern
 
 typedef struct		s_tetri
 {
+	int				id;
 	int				tetri;
 	char			**tab;
 	int				firstx;
