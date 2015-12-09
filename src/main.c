@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:45:55 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/08 19:15:40 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/09 17:09:45 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,34 +21,27 @@ int		main(int argc, char **argv)
 	int	j;
 
 	j = 0;
-	ptr = NULL;
 	i = 0;
 	(void)argc;
+	ptr = (t_tetri *)malloc(sizeof(t_tetri));
 	str = read_that_file(argv[1]);
 	if (check_init(str) && check_for_char(str))
 	{
-		ft_putendl("d1");
 		tab = ft_strsplit(str, '\n');
 		if (check_for_size(tab))
 		{
-			while (tab[i])
-			{
-				ft_putendl(tab[i]);
-				i++;
-			}
-			ft_putendl("LOL CA SEGFAULT");
-			tab_to_lst(tab);
+			tab_to_lst(tab, ptr);
 			while (ptr->next != NULL)
 			{
-				while (ptr->tab[j])
+				while (j < 4)
 				{
-					ft_putendl(tab[j]);
+					ft_putendl(ptr->tab[j]);
 					j++;
 				}
+				j = 0;
 				ptr = ptr->next;
 			}
 		}
-		ft_putendl("d2");
 	}
 	else
 		ft_putstr("error");

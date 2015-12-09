@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:30:41 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/08 19:28:05 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/09 14:02:10 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ typedef struct		s_tetri
 }					t_tetri;
 
 char				*ft_strcpy(char *dst, const char *src);
-void				tab_to_lst(char **tab);
+void				tab_to_lst(char **tab, t_tetri *ptr);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_itoa(int n);
 int					check_for_contact(char **tab);
