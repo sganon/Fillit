@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:45:55 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/11 19:44:18 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/13 19:03:05 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	ft_putlsttab(t_tetri *ptr)
 			ft_putendl(ptr->tab[i]);
 			i++;
 		}
+		ft_putchar('\n');
 		i = 0;
 		ptr = ptr->next;
 	}
@@ -67,10 +68,11 @@ int		main(int argc, char **argv)
 		if (check_for_size(tab))
 		{
 			tab_to_lst(tab, ptr);
-			//ft_putlsttab(ptr);
+			ptr->tab = move_tetri(ptr->tab);
+			ft_putlsttab(ptr);
 			init_pattern(ptr2);
 			//ft_put_pattern_tab(ptr2);
-			printf("%d", (get_pattern(ptr, ptr2)));
+			
 
 		}
 	}

@@ -6,7 +6,7 @@
 #    By: sganon <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 20:27:43 by sganon            #+#    #+#              #
-#    Updated: 2015/12/11 18:36:28 by sganon           ###   ########.fr        #
+#    Updated: 2015/12/13 18:11:48 by sganon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRC 	= src/main.c \
 		  src/pattern.c \
 		  src/tab_to_lst.c \
 		  src/get_pattern.c \
+		  src/move_tetri.c \
 
 OBJ		= $(SRC:.c=.o)
 
@@ -38,6 +39,7 @@ $(NAME):
 	@mv pattern.o src
 	@mv tab_to_lst.o src
 	@mv get_pattern.o src
+	@mv move_tetri.o src
 	@echo "Creating binary..."
 	@$(CC) $(FLAGS) -o $(NAME) $(OBJ) $(INC) $(LDFLAGS) $(LDLIBS)
 

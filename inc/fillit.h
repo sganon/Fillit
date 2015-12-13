@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:30:41 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/12 21:04:55 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/13 19:00:55 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ typedef struct		s_tetri
 	struct s_tetri	*next;
 }					t_tetri;
 
+int					ft_strcmp(const char *s1, const char *s2);
+char				**move_tetri(char **tab);
 void				ft_putchar(char c);
 int					get_pattern(t_tetri *ptr, t_pattern *pattern);
 void				init_pattern(t_pattern *ptr);
