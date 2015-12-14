@@ -6,7 +6,7 @@
 /*   By: sganon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/13 17:59:52 by sganon            #+#    #+#             */
-/*   Updated: 2015/12/13 18:59:52 by sganon           ###   ########.fr       */
+/*   Updated: 2015/12/14 15:08:44 by sganon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,29 +67,6 @@ char	**move_y(char **tab)
 		i++;
 	}
 	tab = ft_resettab(tab);
-	return (tab);
-}
-
-char	**move_x_2(char **tab, int m_value)
-{
-	int i;
-	int j;
-
-	i = 0;
-	while (tab[i])
-	{
-		j = 0;
-		while (tab[i][j])
-		{
-			if (tab[i][j] == '#')
-			{
-				tab[i][j - m_value] = '#';
-				tab[i][j] = '.';
-			}
-			j++;
-		}
-		i++;
-	}
 	return (tab);
 }
 
